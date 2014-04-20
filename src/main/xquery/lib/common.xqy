@@ -21,8 +21,9 @@ element html {attribute lang {"en"}, attribute xml:lang {"en"},
 };
 
 declare function common:html-head() {
+element title {"fix"},
 (: element title {xdmp:get-session-field("collection"), " : ", $PAGE ," : ", $TITLE}, :)
-element link {attribute rel {"stylesheet"}, attribute type{"text/css"}, attribute href {"http://yui.yahooapis.com/pure/0.4.2/pure-min.css"}}
+element link {attribute rel {"stylesheet"}, attribute type{"text/css"}, attribute href {"http://yui.yahooapis.com/pure/0.4.2/pure-min.css"}} 
 (:element link {attribute rel {"stylesheet"}, attribute type{"text/css"}, attribute href {"/css/page.css"}},
 element script {attribute src {"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}, attribute type {"text/javascript"}, " "},
 element script {attribute src {"/js/jquery.sparkline.min.js"}, attribute type {"text/javascript"}, " "},
