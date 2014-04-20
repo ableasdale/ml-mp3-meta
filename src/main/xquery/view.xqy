@@ -3,16 +3,11 @@ xquery version "1.0-ml";
 import module namespace common = "http://www.example.com/common" at "/lib/common.xqy";
 
 declare variable $fname as xs:string := xdmp:get-request-field("uri");
-(:
-header(': ');
-:)
-
-(
-xdmp:add-response-header("Access-Control-Allow-Origin", "*"),
 
 common:build-page(
 <div id="content">
     <h1>{$fname}</h1>
+    
     <audio controls="controls">
         <source src="play.xqy?uri={$fname}" type="audio/mpeg" />
         Your browser does not support the audio element.
@@ -25,4 +20,3 @@ common:build-page(
     }
     </dl>        
 </div>)
-)
