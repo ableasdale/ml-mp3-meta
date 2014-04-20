@@ -9,9 +9,10 @@ common:build-page(
     <h1>{$fname}</h1>
     
     <audio controls="controls">
-        <source src="play.xqy?uri={$fname}" type="audio/mpeg" />
+        <source src="play.xqy?uri={$fname}" type='audio/mpeg; codecs="mp3"' />
         Your browser does not support the audio element.
     </audio> 
+    
     <h2>Metadata</h2>
     <dl>
     {
