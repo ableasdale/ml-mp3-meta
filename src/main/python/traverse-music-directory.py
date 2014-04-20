@@ -33,7 +33,7 @@ def http_post_file(filename):
 	finally:
 		f.close()
 	response = connection.getresponse()	
-	if response.status != 204 and response.status != 201:
+	if response.status != 200:
 		print("EXCEPTION: " + filename + " | " + str(response.status) + " | " + response.reason + " | "  + response.read().decode())
 
 

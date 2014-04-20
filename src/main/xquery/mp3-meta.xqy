@@ -5,10 +5,7 @@ xquery version "1.0-ml";
 declare variable $fname as xs:string := xdmp:get-request-field("filename");
 declare variable $mp3file := xdmp:get-request-body();
 
-(
-xdmp:log($fname),
-xdmp:log(xdmp:document-filter($mp3file))
-)
+xdmp:document-insert($fname, xdmp:document-filter($mp3file))
 
 (:
 let $doc :=  xdmp:document-get($fname,
